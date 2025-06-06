@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+    <!-- <link rel="stylesheet" href="./css/home.css"> -->
+    <link rel="stylesheet" href="./css/signup.css">
+</head>
+<body>
+    <header id="header" class="header">
+
+        <div class="nav-container ">
+            <nav class="main-nav">
+                <ul class="main-menu">
+                    <li>
+                        <a href="./index.html">
+                            <img src="./images/netflix.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <button class="home-btn menu-btn sign-in-btn"><a href="./login.html">Sign In</a></button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <div class="main-container">
+            <div class="raised-tp"><h3>STEP <b>1</b> of <b>3</b></h3></div>
+            <h1>Create a password to start your membership</h1>
+            <p>
+                Just a few more steps and you're done!
+                We hate paperwork, too.
+            </p>
+            <form action="">
+                <div class="form-container">
+                    <input type="email" id="email" placeholder="Email address" required>
+                    <input type="password" id="password" placeholder="Add a password" required>
+    
+                    <div class="offers-box">
+                        <input type="checkbox" name="offers" id="offers" class="check">
+                        <label for="offers">Please do not email me Netflix special offers</label>
+                    </div>
+                </div>
+                <button type="submit" class="next-btn">Next</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.body.onload = () => {
+            document.querySelector("#email").value = localStorage.getItem("email")
+        }
+
+        document.querySelector("form").onsubmit = (e) => {
+            console.log("uo")
+            e.preventDefault()
+            e.stopPropagation()
+
+            localStorage.setItem("password", document.querySelector("#password").value)
+            location.href = "./plans.html"
+        }
+    </script>
+</body>
+</html>

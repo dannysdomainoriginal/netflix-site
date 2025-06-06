@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <header id="header" class="header">
+
+        <div class="nav-container ">
+            <nav class="main-nav">
+                <ul class="main-menu">
+                    <li>
+                        <a href="./index.html">
+                            <img src="./images/netflix.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <button class="home-btn menu-btn sign-in-btn">Sign In</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <section id="home" class="home">
+            <div class="home-container">
+                <div class="form-container">
+                    <h1>Sign In</h1>
+
+                    <form action="">
+                        <input type="email" id="email" placeholder="Email address" required>
+                        <input type="password" id="password" placeholder="Add a password" required>
+
+                        
+                        <button type="submit" class="login-btn">Sign In</button>
+
+                        <p class="or">OR</p>
+
+                        <button type="reset" class="login-btn grey">Use a Sign-In Code</button>
+
+                        <p class="forgot-password"><a href="../Website for presentation/">Forgot password?</a></p>
+
+                        <div class="remember-me-box">
+                            <input type="checkbox" name="remember-me" id="remember-me" class="check">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+
+                        <p class="new">New to Netflix? <a href="./signup.html" class="signup-link">Sign Up Now</a></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <script>
+        document.querySelector("form").onsubmit = (e) => {
+            console.log("uo")
+            e.preventDefault()
+            e.stopPropagation()
+
+            localStorage.setItem("email", document.querySelector("#email").value)
+            localStorage.setItem("password", document.querySelector("#password").value)
+            location.href = "./accounts.html"
+        }
+    </script>
+</body>
+</html>

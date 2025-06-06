@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font: inherit;
+  border: none;
+  color: inherit;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #c30811 !important;
+}
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: url("../images/home-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.header .nav-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.header .main-nav {
+  padding: 2rem;
+  margin: auto;
+  max-width: 1120px;
+}
+.header .main-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header .main-nav ul img {
+  max-width: 148px;
+}
+.header .main-nav ul button {
+  background: #E50914;
+  color: white;
+  font: 1.5rem;
+  font-family: "Inter", sans-serif;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.4rem;
+}
+.header .home {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+.header .home .home-container {
+  text-align: center;
+  margin-top: 4.5rem;
+}
+.header .home .home-container * {
+  margin: auto;
+}
+.header .home .home-container h1 {
+  font-size: 3rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  line-height: 1.4;
+  max-width: 700px;
+}
+.header .home .home-container p {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 1.5rem;
+}
+.header .home .home-container p.home-caption {
+  font-weight: bold;
+  margin: 0.7rem auto 3.5rem;
+  font-size: 1.4rem;
+}
+.header .home .home-container .form {
+  display: flex;
+  width: 500px;
+  font-family: "Inter", sans-serif;
+  gap: 1.5rem;
+}
+.header .home .home-container .form .email {
+  flex-grow: 1.5;
+}
+.header .home .home-container .form #email {
+  padding: 1.2rem 1rem;
+  border-radius: 5px;
+  width: 100%;
+  background: transparent;
+  border: 2px solid white;
+}
+.header .home .home-container .form #email:-moz-placeholder-shown {
+  color: white !important;
+}
+.header .home .home-container .form #email:placeholder-shown {
+  color: white !important;
+}
+.header .home .home-container .form button {
+  background: #E50914;
+  color: white;
+  font: 1.5rem;
+  font-family: "Inter", sans-serif;
+  padding: 1.2rem 1.2rem;
+  border-radius: 0.4rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-container .main-nav ul li button {
+  opacity: 0;
+}
+.nav-container .main-nav ul li button:hover {
+  cursor: default;
+}
+
+.header {
+  min-height: 100vh;
+  height: auto;
+  padding: 4rem 0;
+}
+
+.home .home-container * {
+  font-family: "Inter", sans-serif !important;
+}
+.home .home-container .form-container {
+  width: 450px;
+  background-color: rgba(0, 0, 0, 0.612);
+  padding: 2rem 3.5rem;
+  text-align: left;
+}
+.home .home-container .form-container h1 {
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1.7rem;
+  line-height: 1.3;
+}
+.home .home-container input[type=email], .home .home-container input[type=password] {
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1.12rem;
+  background: rgba(0, 0, 0, 0.253);
+  border: 1px solid rgba(128, 128, 128, 0.58);
+  margin-bottom: 1rem;
+}
+.home .home-container .remember-me-box {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.home .home-container .remember-me-box * {
+  margin: 0;
+}
+.home .home-container .check {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.home .home-container .check + label {
+  font-size: 1rem;
+}
+.home .home-container .login-btn {
+  margin: 0 0 1rem;
+  display: block;
+  width: 100%;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  color: white;
+  border-radius: 8px;
+  background: #E50914;
+}
+.home .home-container .login-btn.grey {
+  background-color: rgba(61, 63, 62, 0.4431372549);
+}
+.home .home-container .login-btn.grey:hover {
+  background-color: rgba(36, 37, 37, 0.4431372549) !important;
+}
+.home .home-container .forgot-password, .home .home-container .or {
+  text-align: center;
+}
+.home .home-container .forgot-password a, .home .home-container .or a {
+  text-decoration: underline;
+}
+.home .home-container .forgot-password a:hover, .home .home-container .or a:hover {
+  text-decoration: none;
+}
+.home .home-container .new {
+  font-size: 1.2rem;
+}
+.home .home-container .new .signup-link {
+  font-weight: bold;
+}
+.home .home-container .new .signup-link:hover {
+  text-decoration: underline;
+  color: #cccccc;
+}
+
+body {
+  overflow-x: hidden;
+}

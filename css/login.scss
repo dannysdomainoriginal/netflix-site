@@ -1,0 +1,126 @@
+@import "./home.scss";
+
+.nav-container .main-nav ul li button{
+    &:hover{
+        cursor: default;
+    }
+
+    opacity: 0;
+}
+
+.header{
+    min-height: 100vh;
+    height: auto;
+
+    padding: 4rem 0;
+}
+
+.home{
+    .home-container{
+        *{
+            font-family: $theme-font !important;
+        }
+        
+
+        .form-container{
+            width: 450px;
+            background-color: rgba(0, 0, 0, 0.612);
+            padding: 2rem 3.5rem;
+
+            text-align: left;
+
+            h1{
+                font-size: 2rem;
+                font-family: $theme-font;
+                font-weight: 700;
+                margin-bottom: 1.7rem;
+                line-height: 1.3;
+            }
+        }
+
+        input[type="email"], input[type="password"]{
+            padding: 1rem 1rem;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 1.12rem;
+
+            background: rgba(0, 0, 0, 0.253);
+            border: 1px solid rgba(128, 128, 128, 0.58);
+            margin-bottom: 1rem;
+        }
+
+        .remember-me-box{
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            gap: 1rem;
+
+            margin-top: 2rem;
+
+            *{
+                margin: 0;
+            }
+
+            margin-bottom: 1rem;
+        }
+
+        .check{
+            width: 1.3rem;
+            height: 1.3rem;
+
+            & + label {
+                font-size: 1rem;
+            }
+        }
+
+        .login-btn{
+            margin: 0 0 1rem;
+            display: block;
+            width: 100%;
+            padding: .6rem 1.2rem;
+            font-size: 1rem;
+            color: white;
+            border-radius: 8px;
+
+            background: $theme-color;
+
+            &.grey{
+                background-color: #3d3f3e71;
+
+                &:hover{
+                    background-color: darken($color: #3d3f3e71, $amount: 10) !important;
+                }
+            }
+        }
+
+        .forgot-password, .or{
+            text-align: center;
+
+            a{
+                text-decoration: underline;
+
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .new{
+            font-size: 1.2rem;
+
+            .signup-link{
+                font-weight: bold;
+
+                &:hover{
+                    text-decoration: underline;
+
+                    color: darken(white, 20);
+                }
+            }
+        }
+    }
+}
+
+body{
+    overflow-x: hidden;
+}

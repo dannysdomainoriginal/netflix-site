@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    
+    text-decoration: none;
+    font: inherit;
+    border: none;
+    color: inherit;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: darken($color: $theme-color, $amount: 7) !important;
+}

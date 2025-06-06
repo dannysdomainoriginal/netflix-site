@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font: inherit;
+  border: none;
+  color: inherit;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #c30811 !important;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+}
+
+.nav-container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 0.5px solid rgba(128, 128, 128, 0.466);
+}
+
+.main-nav {
+  padding: 2rem;
+  margin: auto;
+  max-width: 1120px;
+}
+.main-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-nav ul img {
+  max-width: 148px;
+}
+.main-nav ul button {
+  background: #E50914;
+  color: white;
+  font: 1.5rem;
+  font-family: "Inter", sans-serif;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.4rem;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.main {
+  width: 100vw;
+  min-height: 80vh;
+  margin: 2rem 0;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+.main-container {
+  width: 500px;
+}
+.main-container h1 {
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+.main-container p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.main-container h3 {
+  font-size: 13px;
+  text-transform: capitalize;
+  margin-bottom: 0.2rem;
+}
+.main-container input[type=email], .main-container input[type=password] {
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1.12rem;
+  background: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.58);
+  margin-bottom: 1.5rem;
+}
+.main-container .offers-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main-container .check {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.main-container .check + label {
+  font-size: 1.2rem;
+}
+.main-container .next-btn {
+  margin: 2.1rem 0;
+  display: block;
+  width: 100%;
+  padding: 1rem 1.2rem;
+  font-size: 1.3rem;
+  color: white;
+  background: #E50914;
+}
+
+.plans-page-main .main-container {
+  width: 1020px;
+}
+.plans-page-main .main-container h1 {
+  margin-bottom: 1.5rem;
+}
+.plans-page-main .main-container .cards {
+  width: 100%;
+}
+.plans-page-main .main-container .cards-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.plans-page-main .main-container .cards .card {
+  border: 1px solid rgba(128, 128, 128, 0.466);
+  padding: 0.6rem 0.5rem;
+  border-radius: 17px;
+  position: relative;
+}
+.plans-page-main .main-container .cards .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: transparent;
+}
+.plans-page-main .main-container .cards .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 13px -3px;
+  cursor: pointer;
+}
+.plans-page-main .main-container .cards .card.chosen {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 13px -3px;
+}
+.plans-page-main .main-container .cards .card.chosen .showcase {
+  background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+}
+.plans-page-main .main-container .cards .card .showcase {
+  padding: 0.8rem;
+  background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(176, 56, 220) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+  color: white;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+}
+.plans-page-main .main-container .cards .card .showcase p {
+  font-size: 0.9rem;
+}
+.plans-page-main .main-container .cards .card .showcase h2 {
+  font-size: 1.05rem;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  margin: 0.3rem 0 0.5rem;
+}
+.plans-page-main .main-container .cards .card .feature {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.466);
+  margin: 0 1rem;
+}
+.plans-page-main .main-container .cards .card .feature p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.plans-page-main .main-container .cards .card .feature h3 {
+  font-size: 0.8rem;
+  font-weight: bolder;
+  color: grey;
+}
+.plans-page-main .main-container .cards .card .feature:last-child {
+  border-bottom: 0;
+}
+.plans-page-main .main-container .next-btn {
+  border-radius: 10px;
+  width: 500px;
+  margin: 3rem auto 0;
+}
